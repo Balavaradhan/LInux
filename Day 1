@@ -9,23 +9,13 @@ In recent years, Linux has gained popularity among desktop users as well, due to
 Learning Linux is a very valuable skill for DevOps engineers, as it provides a deep understanding of the operation system upon which many modern applications and services are operating.
 In this course we will cover two main core components of every Linux system: files and processes, as well as a lot of small topics such as io redirect, package management, environment variables and useful commands.
 
-## Resources
 
-The below list is the resources upon which this module was built. From time to time we will attach references for further reading.
+### What is command line?
 
-- Good Linux tutorial for beginners https://ryanstutorials.net/linuxtutorial/
-- Linux comprehensive book for beginners https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf
-- Advanced Linux and Bash scripting https://tldp.org/LDP/abs/abs-guide.pdf
-- https://csis.pace.edu/adelgado/rha-030/
+Learning Linux using the command line (a.k.a. Terminal) running shell called Bash can be confusing and unfriendly for new users.
+A command line, or terminal, is a text based interface to the system. we type command text as input through cli, and an output will be given back through text in cli.
 
-## First Steps
-
-### The command line
-
-We'll be learning Linux using the command line (a.k.a. **Terminal**) running shell called **Bash**.
-The command line interface (**cli**) may seem confusing and unfriendly for new users. Don't worry, with a bit of practice you'll soon see how useful this tool is.
-A command line, or terminal, is a text based interface to the system. Type any command text in the cli, and an output will be given to you, as text.
-The command line typically presents you with a **prompt**. Most of the time you will be issuing commands.
+The command line typically presents you with prompts. Most of the time you will be issuing commands.
 
 Here is an example:
 
@@ -102,10 +92,10 @@ Here are a few ways you can seek help and get answers to your questions:
 
 ## File system fundamentals
 
-**"On a Linux system, everything is a file; if something is not a file, it is a process."**
+"On a Linux system, everything is a file; if something is not a file, it is a process."
 
-In linux, under the hood, everything is actually a **file**. A text file is a file, a directory is a file, your keyboard is a file (one that the system reads from only), your monitor is a file (one that the system writes to only), when you want to send data over the internet, you write it to a unique file, etc.
-How could that statement be true? because there are **special files** that are more than just files (e.g. sockets, devices etc.).
+In linux, under the hood, everything is actually a file. A text file is a file, a directory is a file, your keyboard is a file (one that the system reads from only), your monitor is a file (one that the system writes to only), when you want to send data over the internet, you write it to a unique file, etc.
+How could that statement be true? because there are special files that are more than just files (e.g. sockets, devices etc.).
 
 ```console
 myuser@hostname:~$ ls -l
@@ -170,9 +160,9 @@ The file system under linux has an hierarchical structure.
 At the very top of the structure is what's called the `root directory`. It is denoted by a single slash (`/`).
 It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
 
-A **path** is the reference of a particular file or directory on the system.
+A path is the reference of a particular file or directory on the system.
 
-There are 2 types of paths we can use, **Absolute** and **Relative**. We can refer to a given file either by its Absolute or Relative path, to our choice.
+There are 2 types of paths we can use, Absolute and Relative. 
 
 - Absolute paths specify a location (file or directory) in relation to the root directory, they always begin with a forward slash (`/`).
 - Relative paths specify a location in relation to the current working directory.
@@ -290,25 +280,18 @@ By default, these streams are connected to the terminal, but they can be redirec
 
 Do you see how **"On a Linux system, everything is a file"**. Keep in mind this statement, it'll help you to understand linux's behavior.
 
-# Exercises
 
-### :pencil2: Know your system
+#List of Commands used in Day 1
 
-Answer the below question only by `cat` the content of files. 
+1. ls  - list all the files and directories in the folder.
+2. echo  - "echo" is like a print command which prints the output to screen.
+3. pwd  -  pwd stands for print working directory, it prints the present directory to the screen.
+4. cd  -  cd stands for change directory, this command is used to move from one directory to other.
+5. touch - touch command is used to create a new file
+6. file - file command is used to know the type  of file
+7. lsblk  - The lsblk command in Linux is used to list information about all available block devices on the system. "Block devices" refer to storage devices like hard drives, SSDs, USB drives, and their partitions, as well as virtual devices like LVM logical volumes and loop devices.
 
-Change directory to the `/proc` directory. 
+Note: All the commands have differnet options, can be identified by using man and help pages as stated above.
+ 
 
-1. What CPU(s) is the system running on?
-2. How much RAM does it currently use?
-3. How much swap space do you have?
-4. What drivers are loaded?
-5. How many hours has the system been running?
-6. Which filesystems are known by your system?
 
-Change to `/etc`.
-
-1. How long does the system keep the log file in which user logins are monitored?
-2. How many users are defined on your system? Don't count them, let the computer do it for you using wc!
-3. How many groups do you have?
-4. Which version of bash is installed on this system?
-5. Where is the time zone information kept?
